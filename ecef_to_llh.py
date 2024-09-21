@@ -57,8 +57,8 @@ while (math.isnan(prev_lat_rad) or abs(lat_rad-prev_lat_rad)>10e-7) and count<5:
   prev_lat_rad = lat_rad
   lat_rad = math.atan((r_z_km+c_E*(E_E**2)*math.sin(lat_rad))/r_lon_km)
   count = count+1
-  # calculate hae
-  hae_km = r_lon_km/math.cos(lat_rad)-c_E
+# calculate hae
+hae_km = r_lon_km/math.cos(lat_rad)-c_E
 # print latitude (deg), longitude (deg), and HAE (km)
 print(lon_deg)
 print(lat_rad*180.0/math.pi)
